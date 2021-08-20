@@ -140,7 +140,7 @@ matplotlib.rcParams["figure.dpi"] = 100
 taxi_data.plot()
 ```
 
-Observe que algo atípico ocorre em torno do ponto de dados número 6000. Além disso, como seria de se esperar com o número de passageiros de táxi, a contagem de passageiros parece mais ou menos periódica. Vamos ampliar não apenas para examinar essa anomalia, mas também para obter uma imagem melhor da aparência dos dados "normais".
+Observe que algo atípico ocorre em torno do ponto de dados número 6000. Além disso, para o número de passageiros de táxi, a contagem de passageiros parece mais ou menos periódica. Vamos ampliar não apenas para examinar essa anomalia, mas também para obter uma imagem melhor da aparência dos dados "normais".
 
 Isso mostra que o número de viagens de táxi feitas é principalmente periódico com um modo de comprimento de aproximadamente 50 pontos de dados. Na verdade, o modo tem comprimento 48, pois cada ponto de dados representa um compartimento de 30 minutos da contagem de viagens. Portanto, esperamos outro modo de comprimento 336 = 48 × 7, a duração de uma semana. Freqüências menores também ocorrem ao longo do dia. Por exemplo, aqui estão os dados ao longo do dia contendo a anomalia acima:
 
@@ -192,7 +192,7 @@ print(f"Training job name: {rcf.latest_training_job.job_name}")
 
 ### Inferência
 
-Para criar inferência nos dados (encontrar os pontos de anomalia na série de dados), criando um endpoint e especificando qual tipo de instância que produz a inferência mais rápida e com menor custo.
+Para criar inferência nos dados (encontrar os pontos de anomalia na série de dados), é criado um endpoint e especificando qual tipo de instância que produz a inferência mais rápida e com menor custo.
 
 ```
 rcf_inference = rcf.deploy(initial_instance_count=1, instance_type="ml.m4.xlarge")
