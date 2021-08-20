@@ -97,3 +97,23 @@ s3 = boto3.client("s3")
 s3.download_file(downloaded_data_bucket, f"{downloaded_data_prefix}/{data_filename}", data_filename)
 taxi_data = pd.read_csv(data_filename, delimiter=",")
 ```
+
+Antes de treinar qualquer modelo, é importante inspecionar os dados primeiro. Talvez haja alguns padrões ou estruturas subjacentes que possam fornecer "dicas" para o modelo ou talvez haja algum ruído que possa ser pré-processado.
+
+```
+taxi_data.head()
+```
+
+Com o código a seguir, em uma nova célula vamos gerar um gráfico com os pontos dos dados
+
+```%matplotlib inline
+
+import matplotlib
+import matplotlib.pyplot as plt
+
+matplotlib.rcParams["figure.dpi"] = 100
+
+taxi_data.plot()
+```
+
+Observe que algo atípico ocorre em torno do ponto de dados número 6000. Além disso, como seria de se esperar com o número de passageiros de táxi, a contagem de passageiros parece mais ou menos periódica. Vamos ampliar não apenas para examinar essa anomalia, mas também para obter uma imagem melhor da aparência dos dados "normais".
