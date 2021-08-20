@@ -107,6 +107,8 @@ if check_bucket_permission(downloaded_data_bucket):
 
 Os dados vêm do conjunto de dados Numenta Anomaly Benchmark (NAB) NYC Taxi. Após o download, os dados são armazenados em um bucket S3. Os dados consistem no número de passageiros de táxi na cidade de Nova York ao longo de seis meses agregados em buckets de 30 minutos. Há pontos anômalos ocorrendo durante eventos como a maratona de Nova York, Dia de Ação de Graças, Natal, dia de Ano Novo e no dia de tempestade de neve.
 
+Dados disponíveis em: https://github.com/numenta/NAB/blob/master/data/realKnownCause/nyc_taxi.csv
+
 Importar para uma nova célula de código:
 
 ```
