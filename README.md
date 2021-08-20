@@ -19,9 +19,31 @@ Não são objetivos deste exemplo:
  
 Este exemplo foi testado no Amazon SageMaker Studio em uma instância ml.t3.medium com kernel Python 3 (Data Science).
 
-## Configurações iniciais
+## Criando o experimento
 
-Nossa primeira etapa é configurar nossas credenciais AWS para que o AWS SageMaker possa armazenar e acessar dados de treinamento e artefatos de modelo. Também precisamos de alguns dados para inspecionar e treinar.
+### Acessar o Amazon Sagemaker
+
+ - Abra um navegador e navegue até o Console do Amazon SageMaker, como alternativa, pode pesquisar por SageMaker ou localizar o Amazon SageMaker na seção Aprendizado de máquina da página do console.
+ - Clique nas instâncias do Notebook na seção Visão geral ou no painel esquerdo em Notebook.
+
+### Iniciar uma instância do Jupyter Notebook
+
+- Acesse *Create notebook instance* na janela de Notebook instances.
+- Insira um nome em *Notebook instance name* na sessão *Notebook instance settings*
+
+Role para baixo até a seção *Permissions and encryption* e selecione *Create a new role* no dropdown de funções do IAM.
+Deixe todas as opções restantes com suas configurações padrão.
+
+- Selecione *Any S3 bucket* e clique em *Create role*
+- Clique em *Create notebook instance*
+
+### Criar um Notebook
+
+- Clique em *Open Jupyter Lab* da instância criada
+- Nesta janela há diversos exemplos de modelos de ML. Vamos criar um novo com base no exemplo *random_cut_forest.ipybn*.
+  - Clique em *File*, *New*, *Notebook* e selecione o Kernel *conda_python3*
+
+## Configurações iniciais
 
 ### Selecionando o Bucket S3
 
